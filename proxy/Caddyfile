@@ -1,0 +1,5 @@
+http://gallery.martinade.fr {
+  reverse_proxy /api/* backend
+  reverse_proxy /* frontend
+  file_server
+}

@@ -1,0 +1,21 @@
+body {
+  margin: 40px auto;
+  padding: 0 10px;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: sans-serif;
+  color:#444;
+  background-color: #eee;
+}
+
+figure {
+  position: absolute;
+  left: 0;
+}
+
+figcaption { text-align: center; }
+
+p { text-align: justify; }
+
+h1, h2, h3 { line-height:1.2 }
