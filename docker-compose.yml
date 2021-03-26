@@ -8,13 +8,18 @@ services:
       - 80:80
       - 443:443
     depends_on:
-      - backend
-      - frontend
+      - gallery-backend
+      - gallery-frontend
+      - martinade
 
-  backend:
+  gallery-backend:
     restart: always
     build: ./backend
 
-  frontend:
+  gallery-frontend:
     restart: always
     build: ./frontend
+
+  martinade:
+    restart: always
+    build: ./martinade
