@@ -1,9 +1,9 @@
-gallery.martinade.fr {
+http://gallery.martinade.fr {
   reverse_proxy   /api/*  gallery-backend
   reverse_proxy   /*      gallery-frontend
   file_server
 }
 
-martinade.fr {
+http://martinade.fr {
   reverse_proxy martinade
 }
