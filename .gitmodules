@@ -1,9 +1,9 @@
-[submodule "martinade"]
-	path = martinade
-	url = https://github.com/martinais/martinade.git
 [submodule "backend"]
 	path = backend
 	url = https://github.com/martinais/gallery-backend.git
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/martinais/gallery-frontend-web.git
+[submodule "martinade"]
+	path = martinade
+	url = https://github.com/martinais/martinade.git
