@@ -14,11 +14,36 @@ services:
 
   gallery-backend:
     restart: always
-    build: ./backend
+    build:
+      context: ./backend
+      target: prod
+    depends_on:
+      - database
+      - kvstore
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: ${DB_HOST}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      MAILJET_API_KEY: ${MAILJET_API_KEY}
+      MAILJET_API_SECRET: ${MAILJET_API_SECRET}
+
+  kvstore:
+    image: redis
+
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
 
   gallery-frontend:
     restart: always
-    build: ./frontend
+    build:
+      context: ./frontend
+      target: prod
+    environment:
+      BACKEND_URL: ${BACKEND_URL}
 
   martinade:
     restart: always
