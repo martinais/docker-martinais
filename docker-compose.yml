@@ -42,8 +42,6 @@ services:
     build:
       context: ./frontend
       target: prod
-    environment:
-      BACKEND_URL: ${BACKEND_URL}
 
   martinade:
     restart: always
