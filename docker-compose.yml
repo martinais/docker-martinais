@@ -30,10 +30,10 @@ services:
       MAILJET_API_SECRET: ${MAILJET_API_SECRET}
 
   kvstore:
-    image: redis
+    image: redis:alpine
 
   database:
-    image: postgres
+    image: postgres:alpine
     environment:
       POSTGRES_PASSWORD: ${DB_PASS}
 
