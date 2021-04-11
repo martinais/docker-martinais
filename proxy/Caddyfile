@@ -1,4 +1,4 @@
-http://gallery.martinade.fr {
+gallery.martinade.fr {
   handle_path /api/* {
     rewrite * /{path}
     reverse_proxy gallery-backend
@@ -7,6 +7,6 @@ http://gallery.martinade.fr {
   file_server
 }
 
-http://martinade.fr {
+martinade.fr {
   reverse_proxy martinade
 }
