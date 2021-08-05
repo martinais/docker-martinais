@@ -21,11 +21,14 @@ services:
       - database
       - kvstore
     environment:
+      DEBUG: ${DEBUG}
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
       DB_HOST: ${DB_HOST}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      JWT_EXPIRATION_DELTA: ${JWT_EXPIRATION_DELTA}
+      PIN_EXPIRATION_DELTA: ${PIN_EXPIRATION_DELTA}
       MAILJET_API_KEY: ${MAILJET_API_KEY}
       MAILJET_API_SECRET: ${MAILJET_API_SECRET}
 
