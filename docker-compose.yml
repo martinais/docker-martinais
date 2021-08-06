@@ -31,6 +31,9 @@ services:
       PIN_EXPIRATION_DELTA: ${PIN_EXPIRATION_DELTA}
       MAILJET_API_KEY: ${MAILJET_API_KEY}
       MAILJET_API_SECRET: ${MAILJET_API_SECRET}
+      DATA_FOLDER: ${DATA_FOLDER}
+    volumes:
+      - data:${DATA_FOLDER}
 
   kvstore:
     image: redis:alpine
@@ -49,3 +52,6 @@ services:
   martinade:
     restart: always
     build: ./martinade
+
+volumes:
+  data:
