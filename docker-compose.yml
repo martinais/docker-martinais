@@ -9,8 +9,8 @@ services:
       - 443:443
     depends_on:
       - gallery-backend
-#      - gallery-frontend
-#      - martinade
+      - gallery-frontend
+      - martinade
 
   gallery-backend:
     restart: always
@@ -45,15 +45,15 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
 
-#  gallery-frontend:
-#    restart: always
-#    build:
-#      context: ./frontend
-#      target: prod
-#
-#  martinade:
-#    restart: always
-#    build: ./martinade
+  gallery-frontend:
+    restart: always
+    build:
+      context: ./frontend
+      target: prod
+
+  martinade:
+    restart: always
+    build: ./martinade
 
 volumes:
   data:
